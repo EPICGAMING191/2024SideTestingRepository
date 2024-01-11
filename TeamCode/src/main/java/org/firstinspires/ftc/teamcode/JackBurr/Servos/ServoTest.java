@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode.Servos;
+package org.firstinspires.ftc.teamcode.JackBurr.Servos;
 
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;

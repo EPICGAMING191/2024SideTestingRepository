@@ -92,7 +92,7 @@ public class GoToSquareUsingNumber extends OpMode {
             telemetry.addLine("Invalid current square.");
             requestOpModeStop();
         }
-        move_forward_by_squares(target_row - current_row);
+        move_forward_by_squares(current_row - target_row);
         currentSquare = target_square;
     }
 

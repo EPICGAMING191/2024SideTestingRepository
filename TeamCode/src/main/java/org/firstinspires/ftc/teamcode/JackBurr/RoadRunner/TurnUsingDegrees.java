@@ -10,28 +10,28 @@ import org.firstinspires.ftc.teamcode.trajectorysequence.TrajectorySequenceRunne
 
 import org.firstinspires.ftc.teamcode.drive.SampleMecanumDrive;
 
-public class MoveUsingDistance extends OpMode {
-    @Override
-    public void init() {
+public class TurnUsingDegrees extends OpMode {
+    HardwareMap hwMap;
+    SampleMecanumDrive sampleMecanumDrive = new SampleMecanumDrive(hwMap);
 
+    public TurnUsingDegrees(HardwareMap hardware_map){
+      this.hwMap = hardware_map;
     }
 
-    @Override
+    public void init(HardwareMap hardwareMap_) {
+      this.hwMap = hardwareMap_;
+    }
+
     public void loop() {
 
     }
 
-    public void turnAsync(double angle) {
-        trajectorySequenceRunner.followTrajectorySequenceAsync(
-                trajectorySequenceBuilder(getPoseEstimate())
-                        .turn(angle)
-                        .build()
-        );
+
+    public void turnLeft(int angle){
+      sampleMecanumDrive.turn(-Math.toRadians(angle));
     }
-  
-    public void turnLeft(double angle){
-      turnAsync(-angle);
-      waitForIdle();
+    public void turnRight(int angle){
+      sampleMecanumDrive.turn(Math.toRadians(angle));
     }
 
 }

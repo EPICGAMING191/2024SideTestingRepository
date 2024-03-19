@@ -11,10 +11,12 @@ public class MotorTest extends OpMode {
     @Override
     public void init() {
         motor = hardwareMap.get(DcMotor.class, "motor");
+        motor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
     }
 
     @Override
     public void loop() {
-
+        motor.setPower(1);
+        telemetry.addLine("Motor Power: " + motor.getPower());
     }
 }

@@ -17,29 +17,29 @@ public class MoveUsingDistance extends OpMode {
     public void loop() {
 
     }
-    public Trajectory getNewLeftTrajectory(double distance, HardwareMap hardwareMap){
-        SampleMecanumDrive drive = new SampleMecanumDrive(hardwareMap);
+    public Trajectory getNewLeftTrajectory(double distance, HardwareMap hardMap){
+        SampleMecanumDrive drive = new SampleMecanumDrive(hardMap);
         Trajectory new_trajectory = drive.trajectoryBuilder(new Pose2d())
                 .strafeLeft(distance)
                 .build();
         return new_trajectory;
     }
-    public Trajectory getNewRightTrajectory(double distance, HardwareMap hardwareMap){
-        SampleMecanumDrive drive = new SampleMecanumDrive(hardwareMap);
+    public Trajectory getNewRightTrajectory(double distance, HardwareMap hardMap){
+        SampleMecanumDrive drive = new SampleMecanumDrive(hardMap);
         Trajectory new_trajectory = drive.trajectoryBuilder(new Pose2d())
                 .strafeRight(distance)
                 .build();
         return new_trajectory;
     }
-    public Trajectory getNewForwardTrajectory(double distance, HardwareMap hardwareMap){
-        SampleMecanumDrive drive = new SampleMecanumDrive(hardwareMap);
+    public Trajectory getNewForwardTrajectory(double distance, HardwareMap hardMap){
+        SampleMecanumDrive drive = new SampleMecanumDrive(hardMap);
         Trajectory new_trajectory = drive.trajectoryBuilder(new Pose2d())
                 .forward(distance)
                 .build();
         return new_trajectory;
     }
-    public Trajectory getNewBackwardTrajectory(double distance, HardwareMap hardwareMap){
-        SampleMecanumDrive drive = new SampleMecanumDrive(hardwareMap);
+    public Trajectory getNewBackwardTrajectory(double distance, HardwareMap hardMap){
+        SampleMecanumDrive drive = new SampleMecanumDrive(hardMap);
         Trajectory new_trajectory = drive.trajectoryBuilder(new Pose2d())
                 .back(distance)
                 .build();

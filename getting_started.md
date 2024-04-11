@@ -14,4 +14,4 @@ If you are reading this, you're probably interested in learing how to program in
    - https://www.revrobotics.com/rev-31-1596/
   
 # Next Steps
-Now that you have all of these things, I would recommend reading the book and coding as you go
+Now that you have all of these things, I would recommend reading the book and coding as you go. Java can be a frustrating language, so don't get discouraged.

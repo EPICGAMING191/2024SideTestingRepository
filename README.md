@@ -40,7 +40,7 @@ Some other helpful resources are listed below:
 ###    1. RoadRunner Documentation
    - https://learnroadrunner.com/
   
-## Getting Started
+# Getting Started
 Now that you have all of these things, I would recommend reading the book along with this README and coding as you go. Java can be a frustrating language, so don't get discouraged.
 
 ## What is Java?

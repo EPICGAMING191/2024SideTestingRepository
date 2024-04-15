@@ -79,9 +79,11 @@ In Java, all lines except for comments must end with a semicolon, ';'. This tell
 ## Variables
 In any programming language, a variable is a way to store a number or value. Some variable examples are listed below:
 1. Integer: Can be set to any number
-   - Example: int example_int = 1;
-3. Boolean: Can be set to either true or false
-   - Example: bool hello = true;
+   - Example: **int example_int = 1;**
+2. Boolean: Can be set to either true or false
+   - Example: **bool hello = true;**
+3. String: Used to store text values.
+   - Example: **String hello_world = "Hello World"**
 
 ## Basic Functions
 A function is a way to run code multiple times in a program using different numbers

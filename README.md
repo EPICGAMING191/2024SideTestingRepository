@@ -96,7 +96,8 @@ A function is a way to run code multiple times in a program without copying the 
 OpModes are programs that we use to operate our robot. OpModes are required to have at least the following two functions:
 
 ## Imports
-In able for our program to work, we need to import FTC-made libraries that can interact with our hardware and our robot. To do this we use import statements. To import the motor library, for example, one would use: '''import com.qualcomm.robotcore.hardware.DcMotor;'''
+In able for our program to work, we need to import FTC-made libraries that can interact with our hardware and our robot. To do this we use import statements. To import the motor library, for example, one would use: 
+        import com.qualcomm.robotcore.hardware.DcMotor;
 
 ## @Autonomous vs @TeleOp
 

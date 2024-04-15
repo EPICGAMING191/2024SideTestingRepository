@@ -36,6 +36,7 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
+@TeleOp
 public class MecDrive extends OpMode {
     private DcMotor frontLeftMotor;
     private DcMotor frontRightMotor;

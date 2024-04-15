@@ -1,3 +1,5 @@
+> [!NOTE]
+> If you are looking for the FTC-issued README, you can find it [here](/FTC_README.md)
 # 2024SideTestingRepository
 If you are reading this, you're probably interested in learing how to program in FTC Java. This README will help you get started.
 

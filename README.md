@@ -9,7 +9,7 @@ If you are reading this, you're probably interested in learing how to program in
     - https://developer.android.com/studio
 2.  **FTC SDK**
     - https://github.com/FIRST-Tech-Challenge/FtcRobotController
-3.  **Learn Java For FTC PDF (Very useful book with only some unnecessary content, but not 100% necessary)**
+3.  **Learn Java For FTC PDF (Very useful book with only some unnecessary content. This one isn't 100% necessary, but it's 100% free)**
     - https://raw.githubusercontent.com/alan412/LearnJavaForFTC/master/LearnJavaForFTC.pdf
 4.  **REV Control Hub**
     - https://www.revrobotics.com/rev-31-1595/
@@ -17,11 +17,15 @@ If you are reading this, you're probably interested in learing how to program in
     - https://www.revrobotics.com/rev-31-1596/
 6.  **FTC-Legal Controller (I recommend PS4 Dualshock)**
     - https://www.playstation.com/en-us/accessories/dualshock-4-wireless-controller/
+7.  **REV Batteries**
+   - https://www.revrobotics.com/rev-31-1302/
+8. **REV Battery Chargers (Used to charge the batteries)**
+   - https://www.revrobotics.com/rev-31-1299/
 
 # Robot Parts
 If you are planning to program a robot, you are going to need robot parts. Most FIRST teams have parts from one of these two brands:
-1.  REV Robotics
-2.  GoBilda (My team uses GoBilda because GoBilda parts are more durable)
+1.  **REV Robotics**
+2.  **GoBilda (My team uses GoBilda because GoBilda parts are more durable)**
 
 Some of the parts you will probably need are listed below.
 1. A chassis (Preferrably with mecanum wheels)
@@ -41,6 +45,12 @@ Now that you have all of these things, I would recommend reading the book along 
 
 # What is Java?
 Java is a programming language commonly used for the Android operating system. When we finish programming our robot using Java, we are sending our code to the Control Hub, which then executes our code as a set of directions.
+
+# What is Android Studio?
+Android Studio is an IDE (Integrated Development Environment). IDEs are better to use than plain text editors (such as Notepad) because IDEs provide sytntax highlighting, which allows programmers to better understand code. IDEs also can provide code suggestions and detect code errors without having to run code. In our case, Android Studio allows us to send the code to our robot. We then use our controller and Driver's Hub to control our robot.
+
+# Setup
+Every time you go to program and test your robot
 
 # Creating A New Project
 If you want to start programming, you need to create a new project. This can be done by downloading a copy of the FTC SDK as mentioned above, opening it in Android Studio once Android Studio is installed. Once the FTC SDK is downloaded, locate its .zip file location on your computer and extract it. Once the file extracts, open Android Studio and go to File > New > Import Project. A box will pop open and you should locate the folder where you extracted the SDK to. If you did everything right then your project will open. A FTC tutorial for this can be found [here.](https://ftc-docs.firstinspires.org/en/latest/programming_resources/tutorial_specific/android_studio/downloading_as_project_folder/Downloading-the-Android-Studio-Project-Folder.html)

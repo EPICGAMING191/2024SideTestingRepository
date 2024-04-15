@@ -12,10 +12,12 @@ If you are reading this, you're probably interested in learing how to program in
    - https://www.revrobotics.com/rev-31-1595/
 5. REV Driver's Hub
    - https://www.revrobotics.com/rev-31-1596/
+6. FTC-Legal Controller (I recommend PS4 Dualshock)
+   - https://www.playstation.com/en-us/accessories/dualshock-4-wireless-controller/
 
 # Other Helpful Tools
 Some other helpful resources are listed below:
-1. RoadRunner Documentation
+## 1. RoadRunner Documentation
    - https://learnroadrunner.com/
   
 # Getting Started
@@ -28,6 +30,7 @@ Java is a programming language commonly used for the Android operating system. W
 If you want to start programming, you need to create a new project. This can be done by downloading a copy of the FTC SDK as mentioned above, opening it in Android Studio once Android Studio is installed.
 
 # Mecanum Drive
+Below is the Mecanum Drive Code
 
     package org.firstinspires.ftc.teamcode.CenterStage2324.JackBurr.Drive;
     

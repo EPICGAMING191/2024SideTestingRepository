@@ -31,6 +31,9 @@ If you are planning to program a robot, you are going to need robot parts. Most 
 2.  **GoBilda (My team uses GoBilda because GoBilda parts are more durable)**
 
 Some of the parts you will probably need are listed below.
+> [!NOTE]
+> If you are only doing Camera Vision then you do not necessarily need this equipment, but it would be good to have.
+
 1. A chassis (Preferrably with mecanum wheels)
    - https://www.gobilda.com/strafer-chassis-kit-96mm-mecanum-wheels/
 2. Motors (A great starting place)

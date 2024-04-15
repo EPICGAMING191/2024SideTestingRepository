@@ -28,10 +28,9 @@ Java is a programming language commonly used for the Android operating system. W
 If you want to start programming, you need to create a new project. This can be done by downloading a copy of the FTC SDK as mentioned above, opening it in Android Studio once Android Studio is installed.
 
 # Mecanum Drive
-'''java
 
     package org.firstinspires.ftc.teamcode.CenterStage2324.JackBurr.Drive;
-
+    
     import com.qualcomm.robotcore.eventloop.opmode.OpMode;
     import com.qualcomm.robotcore.hardware.DcMotor;
     import com.qualcomm.robotcore.hardware.HardwareMap;
@@ -79,7 +78,7 @@ If you want to start programming, you need to create a new project. This can be 
         frontRightMotor.setPower(frontRightPower);
         backRightMotor.setPower(backRightPower);
     }
-}
+    }
 
-'''
+
 

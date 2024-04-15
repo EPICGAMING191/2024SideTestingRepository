@@ -92,6 +92,8 @@ A function is a way to run code multiple times in a program using different numb
 ## What are OpModes?
 OpModes are programs that we use to operate our robot. OpModes are required to have at least the following two functions:
 
+## @Autonomous vs @TeleOp
+
 ## Driver's Hub Config
 To access your configuration on your Driver's Hub, click the three dots in the top right and click Configure. This will open a new page.
 

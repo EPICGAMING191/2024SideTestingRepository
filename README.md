@@ -2,17 +2,17 @@
 If you are reading this, you're probably interested in learing how to program in FTC Java. This README will help you get started.
 
 # Prerequisites
-1. PC with Android Studio installed
+**1. PC with Android Studio installed**
    - https://developer.android.com/studio
-2. FTC SDK
+**2. FTC SDK**
    - https://github.com/FIRST-Tech-Challenge/FtcRobotController
-3. Learn Java For FTC PDF (Very useful book with only some unnecessary content, but not 100% necessary)
+**3. Learn Java For FTC PDF (Very useful book with only some unnecessary content, but not 100% necessary)**
    - https://raw.githubusercontent.com/alan412/LearnJavaForFTC/master/LearnJavaForFTC.pdf
-4. REV Control Hub
+**4. REV Control Hub**
    - https://www.revrobotics.com/rev-31-1595/
-5. REV Driver's Hub
+**5. REV Driver's Hub**
    - https://www.revrobotics.com/rev-31-1596/
-6. FTC-Legal Controller (I recommend PS4 Dualshock)
+**6. FTC-Legal Controller (I recommend PS4 Dualshock)**
    - https://www.playstation.com/en-us/accessories/dualshock-4-wireless-controller/
 
 # Other Helpful Tools

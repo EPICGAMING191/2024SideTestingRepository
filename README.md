@@ -18,9 +18,9 @@
 6.  **FTC-Legal Controller (I recommend PS4 Dualshock)**
     - https://www.playstation.com/en-us/accessories/dualshock-4-wireless-controller/
 7.  **REV Batteries**
-   - https://www.revrobotics.com/rev-31-1302/
-8. **REV Battery Chargers (Used to charge the batteries)**
-   - https://www.revrobotics.com/rev-31-1299/
+    - https://www.revrobotics.com/rev-31-1302/
+8.  **REV Battery Chargers (Used to charge the batteries)**
+    - https://www.revrobotics.com/rev-31-1299/
 
 # Robot Parts
 If you are planning to program a robot, you are going to need robot parts. Most FIRST teams have parts from one of these two brands:

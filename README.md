@@ -99,6 +99,7 @@ OpModes are programs that we use to operate our robot. OpModes are required to h
 In able for our program to work, we need to import FTC-made libraries that can interact with our hardware and our robot. To do this we use import statements. To import the motor library, for example, one would use: **import com.qualcomm.robotcore.hardware.DcMotor;**
 
 ## @Autonomous vs @TeleOp
+At the beginning of the file (above the start of the class), we should have one of two things: **@Autonomous** or **@TeleOp**. Changing which one you use will change its column on the Driver's Hub. **@Autonomous** is used when creating Autonomous programs, where the robot moves by itself using camera and sensor inputs and pre-programmed instructions. **@TeleOp** is used when creating TeleOp programs, where the driver controls the robot using the gamepad. My team uses RoadRunner with OpenCV and/or TensorFlow in autonomous. We will get to those later because they are pretty advanced concepts.
 
 ## Driver's Hub Config
 To access your configuration on your Driver's Hub, click the three dots in the top right and click Configure. This will open a new page.

@@ -28,7 +28,6 @@ Java is a programming language commonly used for the Android operating system. W
 If you want to start programming, you need to create a new project. This can be done by downloading a copy of the FTC SDK as mentioned above, opening it in Android Studio once Android Studio is installed.
 
 # Mecanum Drive
-'''Java
 
 
 package org.firstinspires.ftc.teamcode.CenterStage2324.JackBurr.Drive;
@@ -83,4 +82,3 @@ public class MecDrive extends OpMode {
 
 
 
-'''

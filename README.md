@@ -34,11 +34,11 @@ Some of the parts you will probably need are listed below.
 > [!NOTE]
 > If you are only doing Camera Vision then you do not necessarily need this equipment, but it would be good to have.
 
-1. A chassis (Preferrably with mecanum wheels)
+1. **A chassis (Preferrably with mecanum wheels)**
    - https://www.gobilda.com/strafer-chassis-kit-96mm-mecanum-wheels/
-2. Motors (A great starting place)
+2. **Motors (A great starting place)**
    - https://www.gobilda.com/yellow-jacket-planetary-gear-motors#series_5203
-3. Servos (A great place to go after motors)
+3. **Servos (A great place to go after motors)**
    - https://www.gobilda.com/servos
 
 ## Other Helpful Tools

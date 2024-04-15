@@ -18,7 +18,7 @@ If you are reading this, you're probably interested in learing how to program in
 # Other Helpful Tools
 Some other helpful resources are listed below:
 ##    1. RoadRunner Documentation
-      - https://learnroadrunner.com/
+   - https://learnroadrunner.com/
   
 # Getting Started
 Now that you have all of these things, I would recommend reading the book along with this README and coding as you go. Java can be a frustrating language, so don't get discouraged.

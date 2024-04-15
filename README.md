@@ -21,6 +21,8 @@
     - https://www.revrobotics.com/rev-31-1302/
 8.  **REV Battery Chargers (Used to charge the batteries)**
     - https://www.revrobotics.com/rev-31-1299/
+9.  **REV Hardware Client (Free software from REV that allows you to update and detect your Driver's Hub and Control Hub)**
+    - https://docs.revrobotics.com/rev-hardware-client
 
 ## Robot Parts
 If you are planning to program a robot, you are going to need robot parts. Most FIRST teams have parts from one of these two brands:
@@ -50,19 +52,26 @@ Java is a programming language commonly used for the Android operating system. W
 Android Studio is an IDE (Integrated Development Environment). IDEs are better to use than plain text editors (such as Notepad) because IDEs provide sytntax highlighting, which allows programmers to better understand code. IDEs also can provide code suggestions and detect code errors without having to run code. In our case, Android Studio allows us to send the code to our robot. We then use our controller and Driver's Hub to control our robot.
 
 ## Setup
-Every time you go to program and test your robot
+Every time you go to program and test your robot, make sure to power on your Driver's Hub and Control Hub.
 
 ## Creating A New Project
 If you want to start programming, you need to create a new project. This can be done by downloading a copy of the FTC SDK as mentioned above, opening it in Android Studio once Android Studio is installed. Once the FTC SDK is downloaded, locate its .zip file location on your computer and extract it. Once the file extracts, open Android Studio and go to File > New > Import Project. A box will pop open and you should locate the folder where you extracted the SDK to. If you did everything right then your project will open. A FTC tutorial for this can be found [here.](https://ftc-docs.firstinspires.org/en/latest/programming_resources/tutorial_specific/android_studio/downloading_as_project_folder/Downloading-the-Android-Studio-Project-Folder.html)
 
 ## Pushing Code
-Once our code is written, we need to push the code to the Control Hub. Here are some directions to follow each time you start your setup:
-1. Plug a REV 12V battery into your Control Hub. Wait for the Control Hub to create its WiFi network.
-2. 
+Once our code is written, we need to push the code to the Control Hub. Feel free to come back to this at any time. Here are some directions to follow each time you start your setup:
+1. Plug a REV 12V battery into your Control Hub.
+2. Wait for the Control Hub to create a WiFi network.
+3. Connect to the WiFi network using your computer.
+4. Power on the Driver's Hub using the power button. (The Driver's Hub should automatically connect to the Control Hub WiFi network) 
+5. Press the green play button at the top to push the code to the Control Hub. (The button icon is different the next time, but it's the same button)
+When you make changes to your code, make sure your
 
+## Driver's Hub Config
+
+## Basic Functions
 
 ## Mecanum Drive
-Below is the Mecanum Drive Code. The Mecanum Drive is the easiest way to drive a robot that uses Mecanum Wheels
+Below is the Mecanum Drive code. The Mecanum Drive code is the easiest way to drive a robot that uses Mecanum Wheels with a controller.
 
     package org.firstinspires.ftc.teamcode.CenterStage2324.JackBurr.Drive;
     

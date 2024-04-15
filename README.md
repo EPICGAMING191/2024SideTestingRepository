@@ -67,8 +67,8 @@ When you make changes to your code, make sure your computer is still connected t
 In a program, it might be hard to understand the program and/or your program might be having errors. Comments can fix both of these problems. The computer ignores comments and keeps moving through your program when it is run. This means that whever you write on comment lines will be ignored and will not affect the result of your program.
 Comments are a commonly used to do one of two things and can be declared in two different ways:
 1. Explain code
-   - Example: # This is a comment
-   - Example 2: /* This is a comment */
+   - Example: __# This is a comment__
+   - Example 2: __/* This is a comment */__
 2. Stop certain lines of code from running to try to fix an error in the program
    
 The difference between the two ways to declare comments is simple. The comment in Example 2 can span multiple lines and keeps going from the "/* "until the "*/", at which the comment ends. 

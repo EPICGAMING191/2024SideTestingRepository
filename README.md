@@ -55,6 +55,12 @@ Every time you go to program and test your robot
 ## Creating A New Project
 If you want to start programming, you need to create a new project. This can be done by downloading a copy of the FTC SDK as mentioned above, opening it in Android Studio once Android Studio is installed. Once the FTC SDK is downloaded, locate its .zip file location on your computer and extract it. Once the file extracts, open Android Studio and go to File > New > Import Project. A box will pop open and you should locate the folder where you extracted the SDK to. If you did everything right then your project will open. A FTC tutorial for this can be found [here.](https://ftc-docs.firstinspires.org/en/latest/programming_resources/tutorial_specific/android_studio/downloading_as_project_folder/Downloading-the-Android-Studio-Project-Folder.html)
 
+## Pushing Code
+Once our code is written, we need to push the code to the Control Hub. Here are some directions to follow each time you start your setup:
+1. Plug a REV 12V battery into your Control Hub. Wait for the Control Hub to create its WiFi network.
+2. 
+
+
 ## Mecanum Drive
 Below is the Mecanum Drive Code. The Mecanum Drive is the easiest way to drive a robot that uses Mecanum Wheels
 

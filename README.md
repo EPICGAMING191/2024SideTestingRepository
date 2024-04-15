@@ -1,5 +1,5 @@
 # 2024SideTestingRepository
-If you are reading this, you're probably interested in learing how to program in FTC Java. There are a few ways that I recommend learning and they are listed below.
+If you are reading this, you're probably interested in learing how to program in FTC Java. This README will help you get started.
 
 # Prerequisites
 1. PC with Android Studio installed
@@ -24,10 +24,10 @@ Some other helpful resources are listed below:
 Now that you have all of these things, I would recommend reading the book along with this README and coding as you go. Java can be a frustrating language, so don't get discouraged.
 
 # What is Java?
-Java is a programming language commonly used for the Android operating system. When we finish programming our robot using Java, we are sending our code to the Control Hub, which
+Java is a programming language commonly used for the Android operating system. When we finish programming our robot using Java, we are sending our code to the Control Hub, which then executes our code as a set of directions.
 
 # Creating A New Project
-If you want to start programming, you need to create a new project. This can be done by downloading a copy of the FTC SDK as mentioned above, opening it in Android Studio once Android Studio is installed.
+If you want to start programming, you need to create a new project. This can be done by downloading a copy of the FTC SDK as mentioned above, opening it in Android Studio once Android Studio is installed. Once the FTC SDK is downloaded, locate its .zip file location on your computer and extract it. Once the file extracts, open Android Studio and go to File > New > Import Project. A box will pop open and you should locate the folder where you extracted the SDK to.
 
 # Mecanum Drive
 Below is the Mecanum Drive Code
@@ -48,12 +48,10 @@ Below is the Mecanum Drive Code
          
     @Override
     public void init() {
-        gamepad1.rumbleBlips(3);
-        telemetry.addData("Gamepad ID:", gamepad1.getGamepadId());
-        frontLeftMotor = hardwareMap.get(DcMotor.class, "FL");
-        frontRightMotor = hardwareMap.get(DcMotor.class, "FR");
-        backLeftMotor = hardwareMap.get(DcMotor.class, "BL");
-        backRightMotor = hardwareMap.get(DcMotor.class, "BR");
+        frontLeftMotor = hardwareMap.get(DcMotor.class, "fl");
+        frontRightMotor = hardwareMap.get(DcMotor.class, "fr");
+        backLeftMotor = hardwareMap.get(DcMotor.class, "bl");
+        backRightMotor = hardwareMap.get(DcMotor.class, "br");
 
         frontLeftMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         frontRightMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);

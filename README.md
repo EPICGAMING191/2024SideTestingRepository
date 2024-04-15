@@ -87,7 +87,7 @@ In any programming language, a variable is a way to store a number or value. Som
    - Example: **String hello_world = "Hello World"**
 
 ## Basic Functions
-A function is a way to run code multiple times in a program using different numbers
+A function is a way to run code multiple times in a program without copying the same code over and over again.
 
 ## What are OpModes?
 OpModes are programs that we use to operate our robot. OpModes are required to have at least the following two functions:

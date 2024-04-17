@@ -93,7 +93,7 @@ In any programming language, a variable is a way to store a number or value. Som
 2. **Boolean:** Can be set to either true or false
    - Example:
      ```Java
-     bool hello = true;
+     boolean hello = true;
      ```
      
 3. **String:** Used to store text values.
@@ -114,7 +114,7 @@ You can also declare variables at the start of a class without setting their val
 public class VariableExample {
     public int integer_example;
     public String string_example;
-    public bool boolean_example;
+    public boolean boolean_example;
 
     @Override
     public void init(){

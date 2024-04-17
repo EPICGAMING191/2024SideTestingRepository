@@ -109,6 +109,7 @@ In able for our program to work, we need to import FTC-made libraries that can i
 
 ## Telemetry
 Telemetry is the way that we can show text on our Driver's Hub. Examples of using Telemetry are included below.
+    @TeleOp
     public class TelemetryTest extends OpMode {
         @Override
         public void init(){
@@ -116,6 +117,8 @@ Telemetry is the way that we can show text on our Driver's Hub. Examples of usin
             telemetry.addData("Hello", "World");
         }
     }
+
+This code allows us to print "Hello World" to the telemetry in two different ways.
 
 ## @Autonomous vs @TeleOp
 At the beginning of the file (above the start of the class), we should have one of two things: **@Autonomous** or **@TeleOp**. Changing which one you use will change its column on the Driver's Hub. **@Autonomous** is used when creating Autonomous programs, where the robot moves by itself using camera and sensor inputs and pre-programmed instructions. **@TeleOp** is used when creating TeleOp programs, where the driver controls the robot using the gamepad. My team uses RoadRunner with OpenCV and/or TensorFlow in autonomous. We will get to those later because they are pretty advanced concepts.

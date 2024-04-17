@@ -134,18 +134,18 @@ Below is the Mecanum Drive code. The Mecanum Drive code is the easiest way to dr
 
 ```Java
 
-    package org.firstinspires.ftc.teamcode.CenterStage2324.JackBurr.Drive;
+package org.firstinspires.ftc.teamcode.CenterStage2324.JackBurr.Drive;
     
-    import com.qualcomm.robotcore.eventloop.opmode.OpMode;
-    import com.qualcomm.robotcore.hardware.DcMotor;
-    import com.qualcomm.robotcore.hardware.HardwareMap;
+import com.qualcomm.robotcore.eventloop.opmode.OpMode;
+import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.HardwareMap;
 
-    @TeleOp
-    public class MecDrive extends OpMode {
-       private DcMotor frontLeftMotor;
-       private DcMotor frontRightMotor;
-       private DcMotor backLeftMotor;
-       private DcMotor backRightMotor;
+@TeleOp
+public class MecDrive extends OpMode {
+    private DcMotor frontLeftMotor;
+    private DcMotor frontRightMotor;
+    private DcMotor backLeftMotor;
+    private DcMotor backRightMotor;
           
          
     @Override
@@ -161,6 +161,7 @@ Below is the Mecanum Drive code. The Mecanum Drive code is the easiest way to dr
         backRightMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
     }
 
+    @Override
     public void loop() {
         double y = -gamepad1.left_stick_y; // Remember, this is reversed!
         double x = gamepad1.left_stick_x; // Counteract imperfect strafing
@@ -181,7 +182,7 @@ Below is the Mecanum Drive code. The Mecanum Drive code is the easiest way to dr
         frontRightMotor.setPower(frontRightPower);
         backRightMotor.setPower(backRightPower);
      }
-    }
+}
 ```
 
 

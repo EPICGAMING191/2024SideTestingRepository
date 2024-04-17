@@ -75,7 +75,7 @@ Comments are a commonly used to do one of two things and can be declared in two 
    - Example 2: __/* This is a comment */__
 2. Stop certain lines of code from running to try to fix an error in the program
    
-The difference between the two ways to declare comments is simple. The comment in Example 2 can span multiple lines and keeps going from the "/* "until the "*/", at which the comment ends. 
+The difference between the two ways to declare comments is simple. The comment in Example 2 can span multiple lines and keeps going from the "/* "until the "*/", at which the comment ends. The comment in Example 1, however, ends at the end of the line and does not need anything to end it.
 
 ## Java Syntax
 In Java, all lines except for comments must end with a semicolon, ';'. This tells the computer that the line is over and to move to the next line.
@@ -90,7 +90,15 @@ In any programming language, a variable is a way to store a number or value. Som
    - Example: **String hello_world = "Hello World"**
 
 ## Basic Functions
-A function is a way to run code multiple times in a program without copying the same code over and over again.
+A function is a way to run code multiple times in a program without copying the same code over and over again. You can also pass numbers and other things into functions. These are called parameters. Here is an example:
+
+    public int add(int n1, int n2){
+        return n1 + n2;
+    }
+    add(1, 4);
+    # Returns the number 5
+
+The above function 
 
 ## What are OpModes?
 OpModes are programs that we use to operate our robot. OpModes are required to have at least the following two functions:

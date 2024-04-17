@@ -43,7 +43,8 @@ Some of the parts you will probably need are listed below.
 
 ## Other Helpful Tools
 Some other helpful resources are listed below:
- **1. RoadRunner Documentation**
+
+   **1. RoadRunner Documentation**
    - https://learnroadrunner.com/
   
 # Getting Started

@@ -84,7 +84,7 @@ The difference between the two ways to declare comments is simple. The comment i
 In Java, all lines except for comments must end with a semicolon, ';'. This tells the computer that the line is over and to move to the next line. If semicolons are not included on the necessary lines, an error will occur and the program will not run until the error is fixed.
 
 ## Variables
-In any programming language, a variable is a way to store a number or value. Some variable examples are listed below:
+In any programming language, a variable is a way to store a number or value. Some variable examples in Java are listed below:
 1. Integer: Can be set to any number
    - Example:
      ```Java
@@ -101,6 +101,25 @@ In any programming language, a variable is a way to store a number or value. Som
      ```Java
      String hello_world = "Hello World"
      ```
+You can also declare variables at the start of a class without setting their value. These variables can be accessed after this point throughout the program.
+
+```Java
+public class VariableExample {
+    public int integer_example;
+    public String string_example;
+    public bool boolean_example;
+
+    @Override
+    public void init(){
+        integer_example = 5;
+        string_example = "I am an example string.";
+        boolean_example = true;
+    }
+}
+```
+
+## Public vs. Private
+At the beginning of the above class you can see that it is declared a **"public class"**. You may wonder what this means.  When we declare something public, it is able to be accessed by other classes and other files inside your project. When something is private, however, it can only be accessed from the current class and an error will occur if you try to access it from another class or file. 
 
 ## Basic Functions
 A function is a way to run code multiple times in a program without copying the same code over and over again. You can also pass numbers and other things into functions. These are called parameters. Here is an example:
@@ -115,7 +134,7 @@ int result = add(1, 4);
 
 ```
 
-The above function can add two numbers and return them. Inside the parentheses we are declaring what parameters we need for this function. The "**int**" declares that the parameter is an integer. The "**return**" tells the function to return the value of n1 + n2, therefore the integer **result** is set to 5. The function will not run on its own, so we need to run it. That's what the last line is for. Changing the two numbers will change what the function returns, which will change the result of the program. We declare the function as **public int** because the function returns an integer (int).
+The above function can add two numbers and return them. Inside the parentheses we are declaring what parameters we need for this function. The "**int**" declares that the parameter is an integer. The "**return**" tells the function to return the value of n1 + n2, therefore the integer **result** is set to 5. The function will not run on its own, so we need to run it. That's what the last line is for. Changing the two numbers will change what the function returns, which will change the result of the program. We declare the function as **public int** because the function returns an integer (int). You can declare functions in many different ways, such as **"public String"**, **"public boolean"**, or **""public double""**.
 
 ## What are OpModes?
 OpModes are programs that we use to operate our robot. OpModes are required to have at least the following two functions:

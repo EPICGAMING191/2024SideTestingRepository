@@ -78,7 +78,7 @@ Comments are a commonly used to do one of two things and can be declared in two 
 The difference between the two ways to declare comments is simple. The comment in Example 2 can span multiple lines and keeps going from the "/* "until the "*/", at which the comment ends. The comment in Example 1, however, ends at the end of the line and does not need anything to end it.
 
 ## Java Syntax
-In Java, all lines except for comments must end with a semicolon, ';'. This tells the computer that the line is over and to move to the next line.
+In Java, all lines except for comments must end with a semicolon, ';'. This tells the computer that the line is over and to move to the next line. If semicolons are not included on the necessary lines, an error will occur and the program will not run until the error is fixed.
 
 ## Variables
 In any programming language, a variable is a way to store a number or value. Some variable examples are listed below:
@@ -95,7 +95,7 @@ In any programming language, a variable is a way to store a number or value. Som
      
 3. String: Used to store text values.
    - Example:
-     ``Java
+     ```Java
      String hello_world = "Hello World"
      ```
 

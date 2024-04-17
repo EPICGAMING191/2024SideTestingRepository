@@ -144,7 +144,17 @@ int result = add(1, 4);
 The above function can add two numbers and return them. Inside the parentheses we are declaring what parameters we need for this function. The "**int**" declares that the parameter is an integer. The "**return**" tells the function to return the value of n1 + n2, therefore the integer **result** is set to 5. The function will not run on its own, so we need to run it. That's what the last line is for. Changing the two numbers will change what the function returns, which will change the result of the program. We declare the function as **public int** because the function returns an integer (int). You can declare functions in many different ways, such as **"public String"**, **"public boolean"**, or **""public double""**.
 
 ## What are OpModes?
-OpModes are programs that we use to operate our robot. OpModes are required to have at least the following two functions:
+OpModes are programs that we use to operate our robot. OpModes are required to have at least the following two functions: **init()** and **loop()**. Here are is the list of OpModes:
+1. **init()**
+   - Runs once when the driver presses the **INIT** button.
+2. **init_loop()**
+   - Runs repeatedly from the moment the driver presses **INIT** to the moment when the driver presses **PLAY**.
+3. **start()**
+   - Runs once when the driver presses the **PLAY** button.
+4. **loop()**
+   - Runs repeatedly from when the driver presses **PLAY** until the driver presses **STOP**.
+5. **stop()**
+   - Runs once when the driver presses **STOP**.
 
 ## Imports
 In able for our program to work, we need to import FTC-made libraries that can interact with our hardware and our robot. To do this we use import statements. To import the motor library, for example, one would use: **import com.qualcomm.robotcore.hardware.DcMotor;**

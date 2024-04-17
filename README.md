@@ -92,13 +92,15 @@ In any programming language, a variable is a way to store a number or value. Som
 ## Basic Functions
 A function is a way to run code multiple times in a program without copying the same code over and over again. You can also pass numbers and other things into functions. These are called parameters. Here is an example:
 
-    ```Java
+```Java
+
 public int add(int n1, int n2){
     return n1 + n2;
 }
 # Result = 5
 int result = add(1, 4);
-    ```
+
+```
     
 
 The above function can add two numbers and return them. Inside the parentheses we are declaring what parameters we need for this function. The function will not run on its own, so we need to run it. That's what the last line is for. Changing the two numbers will change what the function returns, which will change the result of the program.

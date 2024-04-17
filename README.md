@@ -109,6 +109,7 @@ In able for our program to work, we need to import FTC-made libraries that can i
 
 ## Telemetry
 Telemetry is the way that we can show text on our Driver's Hub. Examples of using Telemetry are included below.
+```Java
     @TeleOp
     public class TelemetryTest extends OpMode {
         @Override
@@ -117,6 +118,7 @@ Telemetry is the way that we can show text on our Driver's Hub. Examples of usin
             telemetry.addData("Hello", "World");
         }
     }
+```
 
 This code allows us to print "Hello World" to the telemetry in two different ways.
 

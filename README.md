@@ -16,13 +16,15 @@
     - https://www.revrobotics.com/rev-31-1595/
 5.  **REV Driver's Hub**
     - https://www.revrobotics.com/rev-31-1596/
-6.  **FTC-Legal Controller (I recommend PS4 Dualshock)**
+6.  **REV Expansion Hub (You will need this if you are going to use more motors than just the drive motors)** 
+    - https://www.revrobotics.com/rev-31-1153/
+7.  **FTC-Legal Controller (I recommend PS4 Dualshock)**
     - https://www.playstation.com/en-us/accessories/dualshock-4-wireless-controller/
-7.  **REV Batteries**
+8.  **REV Batteries**
     - https://www.revrobotics.com/rev-31-1302/
-8.  **REV Battery Chargers (Used to charge the batteries)**
+9.  **REV Battery Chargers (Used to charge the batteries)**
     - https://www.revrobotics.com/rev-31-1299/
-9.  **REV Hardware Client (Free software from REV that allows you to update and detect your Driver's Hub and Control Hub)**
+10.  **REV Hardware Client (Free software from REV that allows you to update and detect your Driver's Hub and Control Hub/Expansion Hub)**
     - https://docs.revrobotics.com/rev-hardware-client
 
 ## Robot Parts
@@ -112,9 +114,8 @@ public int add(int n1, int n2){
 int result = add(1, 4);
 
 ```
-    
 
-The above function can add two numbers and return them. Inside the parentheses we are declaring what parameters we need for this function. The function will not run on its own, so we need to run it. That's what the last line is for. Changing the two numbers will change what the function returns, which will change the result of the program.
+The above function can add two numbers and return them. Inside the parentheses we are declaring what parameters we need for this function. The "**int**" declares that the parameter is an integer. The "**return**" tells the function to return the value of n1 + n2, therefore the integer **result** is set to 5. The function will not run on its own, so we need to run it. That's what the last line is for. Changing the two numbers will change what the function returns, which will change the result of the program. We declare the function as **public int** because the function returns an integer (int).
 
 ## What are OpModes?
 OpModes are programs that we use to operate our robot. OpModes are required to have at least the following two functions:
@@ -140,8 +141,12 @@ This code allows us to print "Hello World" to the telemetry in two different way
 ## @Autonomous vs @TeleOp
 At the beginning of the file (above the start of the class), we should have one of two things: **@Autonomous** or **@TeleOp**. Changing which one you use will change its column on the Driver's Hub. **@Autonomous** is used when creating Autonomous programs, where the robot moves by itself using camera and sensor inputs and pre-programmed instructions. **@TeleOp** is used when creating TeleOp programs, where the driver controls the robot using the gamepad. My team uses RoadRunner with OpenCV and/or TensorFlow in autonomous. We will get to those later because they are pretty advanced concepts.
 
+# Hardware
+This section will explain how to use hardware with our code.
+
 ## Driver's Hub Config
-To access your configuration on your Driver's Hub, click the three dots in the top right and click Configure. This will open a new page.
+The Driver's Hub configuration allows our Driver's Hub to know which Control Hub/Expansion Hub port our specific hardware devices are connected to
+To access your configuration on your Driver's Hub, click the three dots in the top right and click Configure Robot. This will open a new page. Then click New. There will be a list of the connected devices. Click on the device that you want.
 
 
 ## Mecanum Drive
@@ -199,6 +204,9 @@ public class MecDrive extends OpMode {
      }
 }
 ```
+
+## What is the FTC Dashboard?
+The FTC Dashboard is a way that we can track and map variables in our programs and see live camera feed in camera vision programs, along with many other things. 
 
 ## What Is RoadRunner?
 RoadRunner is a motion library that most teams use for autonomous movement.

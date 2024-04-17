@@ -95,16 +95,22 @@ A function is a way to run code multiple times in a program without copying the 
     public int add(int n1, int n2){
         return n1 + n2;
     }
-    add(1, 4);
-    # Returns the number 5
+    # Result = 5
+    int result = add(1, 4);
+    
 
-The above function 
+The above function can add two numbers and return them. Inside the parentheses we are declaring what parameters we need for this function. The function will not run on its own, so we need to run it. That's what the last line is for. Changing the two numbers will change what the function returns, which will change the result of the program.
 
 ## What are OpModes?
 OpModes are programs that we use to operate our robot. OpModes are required to have at least the following two functions:
 
 ## Imports
 In able for our program to work, we need to import FTC-made libraries that can interact with our hardware and our robot. To do this we use import statements. To import the motor library, for example, one would use: **import com.qualcomm.robotcore.hardware.DcMotor;**
+
+## Telemetry
+Telemetry is the way that we can show text on our Driver's Hub. Examples of using Telemetry are included below.
+    telemetry.addLine("Hello World");
+    telemetry.addData("Hello", "World");
 
 ## @Autonomous vs @TeleOp
 At the beginning of the file (above the start of the class), we should have one of two things: **@Autonomous** or **@TeleOp**. Changing which one you use will change its column on the Driver's Hub. **@Autonomous** is used when creating Autonomous programs, where the robot moves by itself using camera and sensor inputs and pre-programmed instructions. **@TeleOp** is used when creating TeleOp programs, where the driver controls the robot using the gamepad. My team uses RoadRunner with OpenCV and/or TensorFlow in autonomous. We will get to those later because they are pretty advanced concepts.

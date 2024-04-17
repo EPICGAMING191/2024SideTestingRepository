@@ -101,6 +101,13 @@ In any programming language, a variable is a way to store a number or value. Som
      ```Java
      String hello_world = "Hello World"
      ```
+
+4. Double: A non-whole number.
+   - Example:
+     ```Java
+     double example_double = 0.4;
+     ```
+     
 You can also declare variables at the start of a class without setting their value. These variables can be accessed after this point throughout the program.
 
 ```Java

@@ -132,6 +132,8 @@ To access your configuration on your Driver's Hub, click the three dots in the t
 ## Mecanum Drive
 Below is the Mecanum Drive code. The Mecanum Drive code is the easiest way to drive a robot that uses Mecanum Wheels with a controller.
 
+```Java
+
     package org.firstinspires.ftc.teamcode.CenterStage2324.JackBurr.Drive;
     
     import com.qualcomm.robotcore.eventloop.opmode.OpMode;
@@ -180,6 +182,6 @@ Below is the Mecanum Drive code. The Mecanum Drive code is the easiest way to dr
         backRightMotor.setPower(backRightPower);
      }
     }
-
+```
 
 

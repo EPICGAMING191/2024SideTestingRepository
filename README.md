@@ -63,10 +63,10 @@ If you want to start programming, you need to create a new project. This can be 
 
 ## Pushing Code
 Once our code is written, we need to push the code to the Control Hub. Feel free to come back to this at any time. Here are some directions to follow each time you start your setup:
-1. Plug a REV 12V battery into your Control Hub.
-2. Wait for the Control Hub to create a WiFi network.
-3. Connect to the WiFi network using your computer.
-4. Power on the Driver's Hub using the power button. (The Driver's Hub should automatically connect to the Control Hub WiFi network) 
+1. **Plug a REV 12V battery into your Control Hub.** (The light should eventually blink blue and then turn green)
+2. **Wait for the Control Hub to create a WiFi network.**
+3. **Connect to the WiFi network using your computer.** (Note: You may need to buy a [WiFi adapter](https://www.target.com/p/tp-link-ac1300-wifi-5-wireless-usb-adapter-archer-t4u/-/A-86783001) because the first time you go to push, Android Studio will need to access the internet while accessing the control hub. You do not need this if your computer uses LAN. I have linked the one that my team uses.)
+4. **Power on the Driver's Hub using the power button.** (The Driver's Hub should automatically connect to the Control Hub WiFi network) 
 5. Press the green play button at the top to push the code to the Control Hub. (The button icon is different the next time, but it's the same button)
 When you make changes to your code, make sure your computer is still connected to the Control Hub and repeat step 5. This updates the code on the Control Hub.
 

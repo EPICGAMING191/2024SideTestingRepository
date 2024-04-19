@@ -185,6 +185,12 @@ This section will explain how to use hardware with our code.
 The Driver's Hub configuration allows our Driver's Hub to know which Control Hub/Expansion Hub port our specific hardware devices are connected to
 To access your configuration on your Driver's Hub, click the three dots in the top right and click Configure Robot. This will open a new page. Then click New. There will be a list of the connected devices. Click on the device that you want.
 
+## HardwareMap
+In our code, we use HardwareMap to tell the Control Hub which hardware device to access.
+
+## Motors
+So now let's explain how to get our first motor running.
+
 
 ## Mecanum Drive
 Below is the Mecanum Drive code. The Mecanum Drive code is the easiest way to drive a robot that uses Mecanum Wheels with a controller.

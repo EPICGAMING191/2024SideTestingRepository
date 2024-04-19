@@ -143,6 +143,9 @@ int result = add(1, 4);
 
 The above function can add two numbers and return them. Inside the parentheses we are declaring what parameters we need for this function. The "**int**" declares that the parameter is an integer. The "**return**" tells the function to return the value of n1 + n2, therefore the integer **result** is set to 5. The function will not run on its own, so we need to run it. That's what the last line is for. Changing the two numbers will change what the function returns, which will change the result of the program. We declare the function as **public int** because the function returns an integer (int). You can declare functions in many different ways, such as **"public String"**, **"public boolean"**, or **""public double""**.
 
+## Imports
+In able for our program to work, we need to import FTC-made libraries that can interact with our hardware and our robot. To do this we use import statements. To import the motor library, for example, one would use: **import com.qualcomm.robotcore.hardware.DcMotor;**
+
 ## What are OpModes?
 OpModes are programs that we use to operate our robot. OpModes are required to have at least the following two functions: **init()** and **loop()**. Here are is the list of OpModes:
 1. **init()**
@@ -156,8 +159,6 @@ OpModes are programs that we use to operate our robot. OpModes are required to h
 5. **stop()**
    - Runs once when the driver presses **STOP**.
 
-## Imports
-In able for our program to work, we need to import FTC-made libraries that can interact with our hardware and our robot. To do this we use import statements. To import the motor library, for example, one would use: **import com.qualcomm.robotcore.hardware.DcMotor;**
 
 ## Telemetry
 Telemetry is the way that we can show text on our Driver's Hub. Examples of using Telemetry are included below.
@@ -172,7 +173,7 @@ Telemetry is the way that we can show text on our Driver's Hub. Examples of usin
     }
 ```
 
-This code allows us to print "Hello World" to the telemetry in two different ways.
+This code allows us to print "Hello World" to the telemetry in two different ways. The **addData** method has two parameters. The first parameter is called **caption**, which must be a string. The second parameter is called value, which can be pretty much anything. The FTC Dashboard, which I will talk about later, can graph the values of some of the numbers that are displayed to the telemetry through **addData**.
 
 ## @Autonomous vs @TeleOp
 At the beginning of the file (above the start of the class), we should have one of two things: **@Autonomous** or **@TeleOp**. Changing which one you use will change its column on the Driver's Hub. **@Autonomous** is used when creating Autonomous programs, where the robot moves by itself using camera and sensor inputs and pre-programmed instructions. **@TeleOp** is used when creating TeleOp programs, where the driver controls the robot using the gamepad. My team uses RoadRunner with OpenCV and/or TensorFlow in autonomous. We will get to those later because they are pretty advanced concepts.

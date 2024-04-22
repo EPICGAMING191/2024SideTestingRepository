@@ -6,7 +6,7 @@
 **If you are reading this, you're probably interested in learing how to program in FTC Java. This README will help you get started.**
 
 > [!WARNING]
-> I am using Windows, so if you are a Linux user some of these things may not work for you.
+> I am using Windows, so if you use any other operating system some of these things may not work for you.
 
 ## Prerequisites
 1.  **PC with Android Studio installed**

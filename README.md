@@ -128,6 +128,20 @@ public class VariableExample {
 }
 ```
 
+Hardware works mostly the same way:
+```Java
+public class HardwareExample {
+    public DcMotor motor_example;
+
+    @Override
+    public void init(){
+
+    }
+}
+```
+
+
+
 ## Public vs. Private
 At the beginning of the above class you can see that it is declared a **"public class"**. You may wonder what this means.  When we declare something public, it is able to be accessed by other classes and other files inside your project. When something is private, however, it can only be accessed from the current class and an error will occur if you try to access it from another class or file. 
 

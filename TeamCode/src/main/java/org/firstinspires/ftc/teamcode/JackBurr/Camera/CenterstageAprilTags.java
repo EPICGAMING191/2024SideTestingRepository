@@ -17,10 +17,9 @@ import org.opencv.core.Mat;
 import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
 import java.util.ArrayList;
 import java.util.List;
-@Disabled
 
 @Autonomous
-public class BookAprilTags extends OpMode {
+public class CenterStageAprilTags extends OpMode {
     private AprilTagProcessor aprilTagProcessor;
     public int aprilTagsCount = 0;
     private VisionPortal visionPortal;

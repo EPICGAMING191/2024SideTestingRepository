@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode.CenterStage2324.JackBurr.Camera.AprilTags;
+package org.firstinspires.ftc.teamcode.JackBurr.Camera.OpenCV;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;

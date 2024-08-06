@@ -16,12 +16,13 @@ public class TFODToolkitTest extends OpMode {
 
     @Override
     public void init() {
+        //TODO: Figure out if thr portal works
         TfodProcessor processor = toolkit.createProcessorFromModel(MODEL_PATH, modelType, WEBCAM_NAME, LIVE_VIEW_ENABLED, USE_DEFAULT_SEASON_MODEL);
         VisionPortal portal = toolkit.getVisionPortal();
     }
 
     @Override
     public void loop() {
-
+        //TODO: Add telemetry code here
     }
 }

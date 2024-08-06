@@ -14,7 +14,6 @@ public class RoboKaiTensorFlowToolkit {
     public HardwareMap hardwareMap;
     public TfodProcessor TFOD_processor;
     public VisionPortal portal;
-    VisionPortal blankPortal;
 
     public RoboKaiTensorFlowToolkit(HardwareMap hardware_map){
         hardwareMap = hardware_map;
@@ -108,6 +107,7 @@ public class RoboKaiTensorFlowToolkit {
     }
 
     public VisionPortal getVisionPortal(){
+        //TODO: Figure out if this line causes errors with the initial variable creation
         return portal;
     }
 }

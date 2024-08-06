@@ -6,11 +6,15 @@ import com.qualcomm.robotcore.hardware.HardwareMap;
 import org.firstinspires.ftc.robotcore.external.hardware.camera.BuiltinCameraDirection;
 import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
 import org.firstinspires.ftc.vision.VisionPortal;
+import org.firstinspires.ftc.vision.VisionProcessor;
+import org.firstinspires.ftc.vision.apriltag.AprilTagProcessor;
 import org.firstinspires.ftc.vision.tfod.TfodProcessor;
 
 public class RoboKaiTensorFlowToolkit {
     public HardwareMap hardwareMap;
     public TfodProcessor TFOD_processor;
+    public VisionPortal portal;
+    VisionPortal blankPortal;
 
     public RoboKaiTensorFlowToolkit(HardwareMap hardware_map){
         hardwareMap = hardware_map;
@@ -96,7 +100,14 @@ public class RoboKaiTensorFlowToolkit {
         else {
             created_processor = createTFODProcessor(type, modelPath);
         }
-        VisionPortal portal = createVisionPortal(created_processor, webcamNameString, liveViewEnabled);
+
+        VisionPortal new_portal;
+        new_portal = createVisionPortal(created_processor, webcamNameString, liveViewEnabled);
+        portal = new_portal;
         return created_processor;
+    }
+
+    public VisionPortal getVisionPortal(){
+        return portal;
     }
 }

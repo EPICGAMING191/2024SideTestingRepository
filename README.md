@@ -102,7 +102,7 @@ In any programming language, a variable is a way to store a number or value. Som
 3. **String:** Used to store text values.
    - Example:
      ```Java
-     String hello_world = "Hello World"
+     String hello_world = "Hello World";
      ```
 
 4. **Double:** A non-whole number.

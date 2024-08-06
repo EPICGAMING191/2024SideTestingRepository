@@ -1,10 +1,9 @@
-package org.firstinspires.ftc.teamcode.CenterStage2324.JackBurr.Drive;
+package org.firstinspires.ftc.teamcode.JackBurr.Drive;
 
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
-import com.qualcomm.robotcore.hardware.HardwareMap;
 
-public class MecDrive extends OpMode {
+public class MecanumDrive extends OpMode {
     private DcMotor frontLeftMotor;
     private DcMotor frontRightMotor;
     private DcMotor backLeftMotor;

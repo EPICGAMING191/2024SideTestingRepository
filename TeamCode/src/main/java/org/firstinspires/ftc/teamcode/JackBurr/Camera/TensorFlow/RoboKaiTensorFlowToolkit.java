@@ -10,6 +10,7 @@ import org.firstinspires.ftc.vision.tfod.TfodProcessor;
 
 public class RoboKaiTensorFlowToolkit {
     public HardwareMap hardwareMap;
+    public TfodProcessor TFOD_processor;
 
     public RoboKaiTensorFlowToolkit(HardwareMap hardware_map){
         hardwareMap = hardware_map;
@@ -69,10 +70,11 @@ public class RoboKaiTensorFlowToolkit {
                     //.setModelAspectRatio(16.0 / 9.0)
                     .build();
         }
+        TFOD_processor = processor;
         return processor;
     }
 
-    public VisionPortal.Builder createVisionPortal(String WEBCAM_NAME, boolean live_view){
+    public VisionPortal createVisionPortal(TfodProcessor processor, String WEBCAM_NAME, boolean live_view){
         VisionPortal.Builder builder = new VisionPortal.Builder();
         // Set the camera (webcam vs. built-in RC phone camera).
         if (USE_WEBCAM) {
@@ -80,7 +82,21 @@ public class RoboKaiTensorFlowToolkit {
         } else {
             builder.setCamera(BuiltinCameraDirection.BACK);
         }
-        builder.setAutoStopLiveView(live_view);
-        return builder;
+        builder.enableLiveView(live_view);
+        builder.addProcessor(processor);
+        return builder.build();
+    }
+
+    public TfodProcessor createProcessorFromModel(String modelPath, ModelType type, String webcamNameString, boolean liveViewEnabled, boolean useDefaultSeasonModel){
+        TfodProcessor created_processor;
+        if (useDefaultSeasonModel){
+            String path = "";
+            created_processor = createTFODProcessor(type, path);
+        }
+        else {
+            created_processor = createTFODProcessor(type, modelPath);
+        }
+        VisionPortal portal = createVisionPortal(created_processor, webcamNameString, liveViewEnabled);
+        return created_processor;
     }
 }

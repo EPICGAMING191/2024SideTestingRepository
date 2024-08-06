@@ -1,10 +1,12 @@
 package org.firstinspires.ftc.teamcode.JackBurr.Camera.TensorFlow;
 
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
+import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 import org.firstinspires.ftc.vision.VisionPortal;
 import org.firstinspires.ftc.vision.tfod.TfodProcessor;
 
+@TeleOp
 public class TFODToolkitTest extends OpMode {
     RoboKaiTensorFlowToolkit toolkit = new RoboKaiTensorFlowToolkit(hardwareMap);
     String MODEL_PATH = "";

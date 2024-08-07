@@ -14,7 +14,7 @@ import java.util.List;
 public class TFODToolkitTest extends OpMode {
     RoboKaiTensorFlowToolkit toolkit = new RoboKaiTensorFlowToolkit(hardwareMap);
     String MODEL_PATH = "";
-    RoboKaiTensorFlowToolkit.ModelType modelType = RoboKaiTensorFlowToolkit.ModelType.CUSTOM_TFOD_MODEL_FILE;
+    RoboKaiTensorFlowToolkit.ModelType modelType = RoboKaiTensorFlowToolkit.ModelType.CUSTOM_TFOD_MODEL_ASSET;
     String WEBCAM_NAME = "Webcam 1";
     boolean LIVE_VIEW_ENABLED = true;
     boolean USE_DEFAULT_SEASON_MODEL = false;

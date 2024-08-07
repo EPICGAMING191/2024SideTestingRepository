@@ -61,4 +61,9 @@ public class TFODToolkitTest extends OpMode {
             toolkit.printDetails(telemetry, recognition, x,y);
         }
     }
+
+    @Override
+    public void stop(){
+        toolkit.stopStreaming();
+    }
 }

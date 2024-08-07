@@ -164,7 +164,6 @@ public class RoboKaiTensorFlowToolkit {
 
     public void exit(){
         stopStreaming();
-
     }
 
 

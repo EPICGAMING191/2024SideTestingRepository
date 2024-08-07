@@ -1,6 +1,7 @@
 package org.firstinspires.ftc.teamcode.JackBurr.Camera.TensorFlow;
 
 
+import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
@@ -14,6 +15,7 @@ import org.firstinspires.ftc.vision.apriltag.AprilTagProcessor;
 import org.firstinspires.ftc.vision.tfod.TfodProcessor;
 
 import java.util.List;
+import java.util.Objects;
 
 public class RoboKaiTensorFlowToolkit {
     public HardwareMap hardwareMap;
@@ -116,6 +118,15 @@ public class RoboKaiTensorFlowToolkit {
         return portal;
     }
 
+    public String setVisionPortalProcessor(VisionProcessor processor){
+        try {
+            portal.setProcessorEnabled(processor, true);
+        } catch (Exception e) {
+            return "Error setting processor: " + e;
+        }
+        return "Successfully set active processor to processor" + processor.toString();
+    }
+
     public void stopStreaming(){
         portal.stopStreaming();
     }
@@ -141,6 +152,11 @@ public class RoboKaiTensorFlowToolkit {
         telemetry.addData("Image", "%s (%.0f %% Conf.)", recognition.getLabel(), recognition.getConfidence() * 100);
         telemetry.addData("- Position", "%.0f / %.0f", objectX, objectY);
         telemetry.addData("- Size", "%.0f x %.0f", recognition.getWidth(), recognition.getHeight());
+    }
+
+    public void exit(){
+        stopStreaming();
+
     }
 
 

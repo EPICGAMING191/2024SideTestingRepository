@@ -1,6 +1,7 @@
 package org.firstinspires.ftc.teamcode.JackBurr.Camera.TensorFlow;
 
 
+import com.acmerobotics.dashboard.FtcDashboard;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.HardwareMap;
@@ -13,6 +14,8 @@ import org.firstinspires.ftc.vision.VisionPortal;
 import org.firstinspires.ftc.vision.VisionProcessor;
 import org.firstinspires.ftc.vision.apriltag.AprilTagProcessor;
 import org.firstinspires.ftc.vision.tfod.TfodProcessor;
+import org.openftc.easyopencv.OpenCvCameraFactory;
+import org.openftc.easyopencv.OpenCvWebcam;
 
 import java.util.List;
 import java.util.Objects;
@@ -38,6 +41,11 @@ public class RoboKaiTensorFlowToolkit {
     public void enableCamera(boolean enabled){
         // Enable/Disable Camera
         USE_WEBCAM = enabled;
+    }
+
+    public void startStreamOnFTCDashboard(HardwareMap hardwareMap, String webcam_name){
+        OpenCvWebcam webcam = OpenCvCameraFactory.getInstance().createWebcam(hardwareMap.get(WebcamName.class, webcam_name));
+        FtcDashboard.getInstance().startCameraStream(webcam,0);
     }
 
     public TfodProcessor createTFODProcessor(ModelType modelType, String modelPath){

@@ -29,6 +29,8 @@ public class TFODToolkitTest extends OpMode {
         //TODO: Figure out if the portal works
         TfodProcessor processor = toolkit.createProcessorFromModel(MODEL_PATH, modelType, WEBCAM_NAME, LIVE_VIEW_ENABLED, USE_DEFAULT_SEASON_MODEL);
         VisionPortal portal = toolkit.getVisionPortal();
+        //TODO: Test below line as well
+        toolkit.startStreamOnFTCDashboard(hardwareMap, WEBCAM_NAME);
     }
 
     @Override

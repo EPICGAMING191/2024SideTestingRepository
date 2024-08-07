@@ -1,14 +1,19 @@
 package org.firstinspires.ftc.teamcode.JackBurr.Camera.TensorFlow;
 
 
+import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
+import org.firstinspires.ftc.robotcore.external.Telemetry;
 import org.firstinspires.ftc.robotcore.external.hardware.camera.BuiltinCameraDirection;
 import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
+import org.firstinspires.ftc.robotcore.external.tfod.Recognition;
 import org.firstinspires.ftc.vision.VisionPortal;
 import org.firstinspires.ftc.vision.VisionProcessor;
 import org.firstinspires.ftc.vision.apriltag.AprilTagProcessor;
 import org.firstinspires.ftc.vision.tfod.TfodProcessor;
+
+import java.util.List;
 
 public class RoboKaiTensorFlowToolkit {
     public HardwareMap hardwareMap;
@@ -110,4 +115,33 @@ public class RoboKaiTensorFlowToolkit {
         //TODO: Figure out if this line causes errors with the initial variable creation
         return portal;
     }
+
+    public void stopStreaming(){
+        portal.stopStreaming();
+    }
+
+    public void resumeStreaming(){
+        portal.resumeStreaming();
+    }
+
+    public List<Recognition> getProcessorRecognitionsList(){
+        return TFOD_processor.getRecognitions();
+    }
+
+    public double getRecognitionXCoordinate(Recognition recognition){
+        return (recognition.getLeft() + recognition.getRight()) / 2;
+    }
+
+    public double getRecognitionYCoordinate(Recognition recognition){
+        return (recognition.getTop() + recognition.getBottom()) / 2;
+    }
+
+    public void printDetails(Telemetry telemetry, Recognition recognition, double objectX, double objectY){
+        telemetry.addData(""," ");
+        telemetry.addData("Image", "%s (%.0f %% Conf.)", recognition.getLabel(), recognition.getConfidence() * 100);
+        telemetry.addData("- Position", "%.0f / %.0f", objectX, objectY);
+        telemetry.addData("- Size", "%.0f x %.0f", recognition.getWidth(), recognition.getHeight());
+    }
+
+
 }

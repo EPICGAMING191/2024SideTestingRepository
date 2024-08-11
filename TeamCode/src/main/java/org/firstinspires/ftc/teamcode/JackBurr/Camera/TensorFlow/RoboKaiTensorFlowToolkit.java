@@ -24,9 +24,19 @@ public class RoboKaiTensorFlowToolkit {
     public HardwareMap hardwareMap;
     public TfodProcessor TFOD_processor;
     public VisionPortal portal;
+    public Telemetry telemetry;
+    public boolean debug;
 
-    public RoboKaiTensorFlowToolkit(HardwareMap hardware_map){
-        hardwareMap = hardware_map;
+    public RoboKaiTensorFlowToolkit(HardwareMap hardware_map, Telemetry target_telemetry, boolean debug){
+        this.hardwareMap = hardware_map;
+        this.telemetry = target_telemetry;
+        this.debug = debug;
+    }
+
+    public void debug_(String message){
+        if (debug == true) {
+            telemetry.addLine(message);
+        }
     }
 
     public boolean USE_WEBCAM = true;
@@ -95,6 +105,7 @@ public class RoboKaiTensorFlowToolkit {
     public VisionPortal createVisionPortal(TfodProcessor processor, String WEBCAM_NAME, boolean live_view){
         VisionPortal.Builder builder = new VisionPortal.Builder();
         // Set the camera (webcam vs. built-in RC phone camera).
+        telemetry.addLine("Name: " + WEBCAM_NAME);
         if (USE_WEBCAM) {
             builder.setCamera(hardwareMap.get(WebcamName.class, WEBCAM_NAME));
         } else {

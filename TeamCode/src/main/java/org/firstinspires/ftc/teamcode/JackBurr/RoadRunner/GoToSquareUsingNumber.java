@@ -41,22 +41,22 @@ public class GoToSquareUsingNumber extends OpMode {
 
     public void move_left_by_squares(int squares){
         int inches = 24 * squares;
-        moveUsingDistance.moveLeft(inches);
+        moveUsingDistance.moveLeft(inches, hardwareMap);
     }
 
     public void move_right_by_squares(int squares){
         int inches = 24 * squares;
-        moveUsingDistance.moveRight(inches);
+        moveUsingDistance.moveRight(inches, hardwareMap);
     }
 
     public void move_forward_by_squares(int squares){
         int inches = 24 * squares;
-        moveUsingDistance.moveForward(inches);
+        moveUsingDistance.moveForward(inches, hardwareMap);
     }
 
     public void move_back_by_squares(int squares){
         int inches = 24 * squares;
-        moveUsingDistance.moveBackward(inches);
+        moveUsingDistance.moveBackward(inches, hardwareMap);
     }
 
     public void move_to_square(int target_square){
@@ -85,6 +85,7 @@ public class GoToSquareUsingNumber extends OpMode {
         }
         else {
             telemetry.addLine("Invalid target square.");
+            target_row = 0;
             requestOpModeStop();
         }
 
@@ -104,10 +105,11 @@ public class GoToSquareUsingNumber extends OpMode {
             current_row = 5;
         }
         else if(currentSquare > 31 && currentSquare <= 36){
-            target_row = 6;
+            current_row = 6;
         }
         else {
             telemetry.addLine("Invalid current square.");
+            current_row = 0;
             requestOpModeStop();
         }
 
@@ -131,6 +133,7 @@ public class GoToSquareUsingNumber extends OpMode {
         }
         else {
             telemetry.addLine("Invalid current square.");
+            target_column = 0;
             requestOpModeStop();
         }
 
@@ -154,18 +157,19 @@ public class GoToSquareUsingNumber extends OpMode {
         }
         else {
             telemetry.addLine("Invalid target square.");
+            current_column = 0;
             requestOpModeStop();
         }
 
-        if (currentRobotOrientation = CurrentRobotOrientation.FORWARD){
+        if (currentRobotOrientation == CurrentRobotOrientation.FORWARD){
             move_forward_by_squares(current_row - target_row);
             move_right_by_squares(target_column - current_column);
         }
-        else if(currentRobotOrientation = CurrentRobotOrientation.BACKWARD){
+        else if(currentRobotOrientation == CurrentRobotOrientation.BACKWARD){
             move_back_by_squares(current_row - target_row);
             move_left_by_squares(target_column - current_column);
         }
-        else if(currentRobotOrientation = CurrentRobotOrientation.LEFT){
+        else if(currentRobotOrientation == CurrentRobotOrientation.LEFT){
             move_right_by_squares(current_row - target_row);
             move_back_by_squares(target_column - current_row);
         }

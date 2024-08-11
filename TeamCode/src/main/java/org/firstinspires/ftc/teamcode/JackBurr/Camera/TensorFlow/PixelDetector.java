@@ -11,11 +11,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 @TeleOp
-public class TFODToolkitTest extends OpMode {
-    RoboKaiTensorFlowToolkit toolkit = new RoboKaiTensorFlowToolkit(hardwareMap, telemetry,false);
-    String MODEL_PATH = "";
-    RoboKaiTensorFlowToolkit.ModelType modelType = RoboKaiTensorFlowToolkit.ModelType.CUSTOM_TFOD_MODEL_ASSET;
-    String WEBCAM_NAME = "Webcam 1";
+public class PixelDetector extends OpMode {
+    public RoboKaiTensorFlowToolkit toolkit = new RoboKaiTensorFlowToolkit(hardwareMap, telemetry,true);
+    public String MODEL_PATH = "";
+    public RoboKaiTensorFlowToolkit.ModelType modelType = RoboKaiTensorFlowToolkit.ModelType.SEASON_DEFAULT_MODEL;
+    public String WEBCAM_NAME = "Webcam 1";
     boolean LIVE_VIEW_ENABLED = true;
     boolean USE_DEFAULT_SEASON_MODEL = false;
 
@@ -23,19 +23,22 @@ public class TFODToolkitTest extends OpMode {
     public List<Double> xList = new ArrayList<>();
     public List<Double> yList = new ArrayList<>();
 
-
     @Override
     public void init() {
-        //TODO: Figure out if the portal works
+        telemetry.addLine(WEBCAM_NAME);
+        WEBCAM_NAME = "Webcam 1";
+        telemetry.addLine("WEBCAM 1  \n");
+        telemetry.update();
         TfodProcessor processor = toolkit.createProcessorFromModel(MODEL_PATH, modelType, WEBCAM_NAME, LIVE_VIEW_ENABLED, USE_DEFAULT_SEASON_MODEL);
+        telemetry.addLine("Created processor.");
         VisionPortal portal = toolkit.getVisionPortal();
-        //TODO: Test below line as well
+        telemetry.addLine("Created portal.");
         toolkit.startStreamOnFTCDashboard(hardwareMap, WEBCAM_NAME);
     }
 
     @Override
     public void init_loop(){
-        //TODO: Add init loop code here
+
     }
 
     @Override
@@ -59,11 +62,7 @@ public class TFODToolkitTest extends OpMode {
                 }
             }
             toolkit.printDetails(telemetry, recognition, x,y);
+            telemetry.addLine("Pixel Detected at (" + x + "," + y +")");
         }
-    }
-
-    @Override
-    public void stop(){
-        toolkit.stopStreaming();
     }
 }

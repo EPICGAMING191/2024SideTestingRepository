@@ -23,13 +23,13 @@ public class TFODToolkitTest extends OpMode {
     public List<Double> xList = new ArrayList<>();
     public List<Double> yList = new ArrayList<>();
 
+    public TfodProcessor processor;
+    public VisionPortal portal;
 
     @Override
     public void init() {
-        //TODO: Figure out if the portal works
-        TfodProcessor processor = toolkit.createProcessorFromModel(MODEL_PATH, modelType, WEBCAM_NAME, LIVE_VIEW_ENABLED, USE_DEFAULT_SEASON_MODEL);
-        VisionPortal portal = toolkit.getVisionPortal();
-        //TODO: Test below line as well
+        processor = toolkit.createProcessorFromModel(hardwareMap, MODEL_PATH, modelType, WEBCAM_NAME, LIVE_VIEW_ENABLED, USE_DEFAULT_SEASON_MODEL);
+        portal = toolkit.getVisionPortal();
         toolkit.startStreamOnFTCDashboard(hardwareMap, WEBCAM_NAME);
     }
 
@@ -39,8 +39,16 @@ public class TFODToolkitTest extends OpMode {
     }
 
     @Override
+    public void start(){
+        telemetry.clearAll();
+    }
+
+    @Override
     public void loop() {
-        List<Recognition> recognitionList = toolkit.getProcessorRecognitionsList();
+        List<Recognition> recognitionList = toolkit.getProcessorRecognitionsList(processor);
+        if (recognitionList.size() < 1){
+            telemetry.addLine("No objects detected yet.");
+        }
         for(Recognition recognition : recognitionList){
             double x = toolkit.getRecognitionXCoordinate(recognition);
             double y = toolkit.getRecognitionYCoordinate(recognition);

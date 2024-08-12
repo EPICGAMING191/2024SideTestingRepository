@@ -13,8 +13,8 @@ import java.util.List;
 @TeleOp
 public class PixelDetector extends OpMode {
     public RoboKaiTensorFlowToolkit toolkit = new RoboKaiTensorFlowToolkit(hardwareMap, telemetry,true);
-    public String MODEL_PATH = "";
-    public RoboKaiTensorFlowToolkit.ModelType modelType = RoboKaiTensorFlowToolkit.ModelType.SEASON_DEFAULT_MODEL;
+    public String MODEL_PATH = "./CenterStage.tflite";
+    public RoboKaiTensorFlowToolkit.ModelType modelType = RoboKaiTensorFlowToolkit.ModelType.CUSTOM_TFOD_MODEL_ASSET;
     public String WEBCAM_NAME = "Webcam 1";
     boolean LIVE_VIEW_ENABLED = true;
     boolean USE_DEFAULT_SEASON_MODEL = false;
@@ -23,15 +23,18 @@ public class PixelDetector extends OpMode {
     public List<Double> xList = new ArrayList<>();
     public List<Double> yList = new ArrayList<>();
 
+    public TfodProcessor processor;
+    public VisionPortal portal;
+
     @Override
     public void init() {
         telemetry.addLine(WEBCAM_NAME);
         WEBCAM_NAME = "Webcam 1";
         telemetry.addLine("WEBCAM 1  \n");
         telemetry.update();
-        TfodProcessor processor = toolkit.createProcessorFromModel(MODEL_PATH, modelType, WEBCAM_NAME, LIVE_VIEW_ENABLED, USE_DEFAULT_SEASON_MODEL);
+        processor = toolkit.createProcessorFromModel(hardwareMap, MODEL_PATH, modelType, WEBCAM_NAME, LIVE_VIEW_ENABLED, USE_DEFAULT_SEASON_MODEL);
         telemetry.addLine("Created processor.");
-        VisionPortal portal = toolkit.getVisionPortal();
+        portal = toolkit.getVisionPortal();
         telemetry.addLine("Created portal.");
         toolkit.startStreamOnFTCDashboard(hardwareMap, WEBCAM_NAME);
     }
@@ -42,8 +45,16 @@ public class PixelDetector extends OpMode {
     }
 
     @Override
+    public void start(){
+        telemetry.clearAll();
+    }
+
+    @Override
     public void loop() {
-        List<Recognition> recognitionList = toolkit.getProcessorRecognitionsList();
+        List<Recognition> recognitionList = toolkit.getProcessorRecognitionsList(processor);
+        if (recognitionList.size() < 1){
+            telemetry.addLine("No objects detected yet.");
+        }
         for(Recognition recognition : recognitionList){
             double x = toolkit.getRecognitionXCoordinate(recognition);
             double y = toolkit.getRecognitionYCoordinate(recognition);

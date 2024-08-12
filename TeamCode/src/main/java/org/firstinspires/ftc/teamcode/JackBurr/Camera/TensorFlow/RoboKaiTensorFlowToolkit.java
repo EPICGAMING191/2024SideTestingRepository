@@ -21,14 +21,15 @@ import java.util.List;
 import java.util.Objects;
 
 public class RoboKaiTensorFlowToolkit {
-    public HardwareMap hardwareMap;
+    public HardwareMap hardware_map;
     public TfodProcessor TFOD_processor;
     public VisionPortal portal;
     public Telemetry telemetry;
     public boolean debug;
+    public static final String SEASON_MODEL = "CenterStage.tflite";
 
     public RoboKaiTensorFlowToolkit(HardwareMap hardware_map, Telemetry target_telemetry, boolean debug){
-        this.hardwareMap = hardware_map;
+        this.hardware_map = hardware_map;
         this.telemetry = target_telemetry;
         this.debug = debug;
     }
@@ -75,7 +76,7 @@ public class RoboKaiTensorFlowToolkit {
         }
         else if (modelType == ModelType.CUSTOM_TFOD_MODEL_ASSET) {
             processor = new TfodProcessor.Builder()
-                    .setModelFileName(modelPath)
+                    .setModelAssetName(modelPath)
                     // The following default settings are available to un-comment and edit as needed to
                     // set parameters for custom models.
                     //.setModelLabels(LABELS)
@@ -88,6 +89,7 @@ public class RoboKaiTensorFlowToolkit {
         }
         else{
             processor = new TfodProcessor.Builder()
+                    //.setModelFileName(SEASON_MODEL)
                     //Load default model for the season
                     // The following default settings are available to un-comment and edit as needed to
                     // set parameters for custom models.
@@ -102,12 +104,12 @@ public class RoboKaiTensorFlowToolkit {
         return processor;
     }
 
-    public VisionPortal createVisionPortal(TfodProcessor processor, String WEBCAM_NAME, boolean live_view){
+    public VisionPortal createVisionPortal(HardwareMap hardwareMap, TfodProcessor processor, String WEBCAM_NAME, boolean live_view){
         VisionPortal.Builder builder = new VisionPortal.Builder();
         // Set the camera (webcam vs. built-in RC phone camera).
-        telemetry.addLine("Name: " + WEBCAM_NAME);
         if (USE_WEBCAM) {
-            builder.setCamera(hardwareMap.get(WebcamName.class, WEBCAM_NAME)); //TODO: THIS LINE CAUSES ERRORS
+            WebcamName webcamName = hardwareMap.get(WebcamName.class, WEBCAM_NAME);
+            builder.setCamera(webcamName);
         } else {
             builder.setCamera(BuiltinCameraDirection.BACK);
         }
@@ -116,7 +118,7 @@ public class RoboKaiTensorFlowToolkit {
         return builder.build();
     }
 
-    public TfodProcessor createProcessorFromModel(String modelPath, ModelType type, String webcamNameString, boolean liveViewEnabled, boolean useDefaultSeasonModel){
+    public TfodProcessor createProcessorFromModel(HardwareMap hardwareMap, String modelPath, ModelType type, String webcamNameString, boolean liveViewEnabled, boolean useDefaultSeasonModel){
         TfodProcessor created_processor;
         if (useDefaultSeasonModel){
             String path = "";
@@ -127,7 +129,7 @@ public class RoboKaiTensorFlowToolkit {
         }
 
         VisionPortal new_portal;
-        new_portal = createVisionPortal(created_processor, webcamNameString, liveViewEnabled);
+        new_portal = createVisionPortal(hardwareMap, created_processor, webcamNameString, liveViewEnabled);
         portal = new_portal;
         return created_processor;
     }
@@ -154,8 +156,8 @@ public class RoboKaiTensorFlowToolkit {
         portal.resumeStreaming();
     }
 
-    public List<Recognition> getProcessorRecognitionsList(){
-        return TFOD_processor.getRecognitions();
+    public List<Recognition> getProcessorRecognitionsList(TfodProcessor processor){
+        return processor.getRecognitions();
     }
 
     public double getRecognitionXCoordinate(Recognition recognition){

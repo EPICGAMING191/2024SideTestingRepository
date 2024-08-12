@@ -13,7 +13,7 @@ import java.util.List;
 @TeleOp
 public class PixelDetector extends OpMode {
     public RoboKaiTensorFlowToolkit toolkit = new RoboKaiTensorFlowToolkit(hardwareMap, telemetry,true);
-    public String MODEL_PATH = "./CenterStage.tflite";
+    public String MODEL_PATH = "CenterStage.tflite";
     public RoboKaiTensorFlowToolkit.ModelType modelType = RoboKaiTensorFlowToolkit.ModelType.CUSTOM_TFOD_MODEL_ASSET;
     public String WEBCAM_NAME = "Webcam 1";
     boolean LIVE_VIEW_ENABLED = true;

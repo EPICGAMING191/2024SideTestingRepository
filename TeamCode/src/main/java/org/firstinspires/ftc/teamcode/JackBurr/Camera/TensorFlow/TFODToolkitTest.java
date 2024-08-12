@@ -30,7 +30,7 @@ public class TFODToolkitTest extends OpMode {
     public void init() {
         processor = toolkit.createProcessorFromModel(hardwareMap, MODEL_PATH, modelType, WEBCAM_NAME, LIVE_VIEW_ENABLED, USE_DEFAULT_SEASON_MODEL);
         portal = toolkit.getVisionPortal();
-        toolkit.startStreamOnFTCDashboard(hardwareMap, WEBCAM_NAME);
+        toolkit.startStreamOnFTCDashboard(hardwareMap, processor, WEBCAM_NAME);
     }
 
     @Override

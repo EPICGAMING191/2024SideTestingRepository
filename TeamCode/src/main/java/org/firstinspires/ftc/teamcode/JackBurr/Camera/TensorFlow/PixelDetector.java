@@ -36,7 +36,7 @@ public class PixelDetector extends OpMode {
         telemetry.addLine("Created processor.");
         portal = toolkit.getVisionPortal();
         telemetry.addLine("Created portal.");
-        toolkit.startStreamOnFTCDashboard(hardwareMap, WEBCAM_NAME);
+
     }
 
     @Override
@@ -46,6 +46,7 @@ public class PixelDetector extends OpMode {
 
     @Override
     public void start(){
+        toolkit.startStreamOnFTCDashboard(hardwareMap, processor, WEBCAM_NAME);
         telemetry.clearAll();
     }
 

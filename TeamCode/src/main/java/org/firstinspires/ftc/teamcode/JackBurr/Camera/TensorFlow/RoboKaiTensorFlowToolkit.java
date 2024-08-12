@@ -54,9 +54,9 @@ public class RoboKaiTensorFlowToolkit {
         USE_WEBCAM = enabled;
     }
 
-    public void startStreamOnFTCDashboard(HardwareMap hardwareMap, String webcam_name){
-        OpenCvWebcam webcam = OpenCvCameraFactory.getInstance().createWebcam(hardwareMap.get(WebcamName.class, webcam_name));
-        FtcDashboard.getInstance().startCameraStream(webcam,0);
+    public void startStreamOnFTCDashboard(HardwareMap hardwareMap, TfodProcessor pro, String webcam_name){
+        // TODO: Fix this
+        //FtcDashboard.getInstance().startCameraStream(new_,0);
     }
 
     public TfodProcessor createTFODProcessor(ModelType modelType, String modelPath){

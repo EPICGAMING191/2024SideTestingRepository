@@ -30,18 +30,13 @@ public class PixelDetector extends OpMode {
     public void init() {
         telemetry.addLine(WEBCAM_NAME);
         WEBCAM_NAME = "Webcam 1";
-        telemetry.addLine("WEBCAM 1  \n");
-        telemetry.update();
         processor = toolkit.createProcessorFromModel(hardwareMap, MODEL_PATH, modelType, WEBCAM_NAME, LIVE_VIEW_ENABLED, USE_DEFAULT_SEASON_MODEL);
-        telemetry.addLine("Created processor.");
         portal = toolkit.getVisionPortal();
-        telemetry.addLine("Created portal.");
-
     }
 
     @Override
     public void init_loop(){
-
+        logResults();
     }
 
     @Override
@@ -52,6 +47,10 @@ public class PixelDetector extends OpMode {
 
     @Override
     public void loop() {
+        logResults();
+    }
+
+    public void logResults(){
         List<Recognition> recognitionList = toolkit.getProcessorRecognitionsList(processor);
         if (recognitionList.size() < 1){
             telemetry.addLine("No objects detected yet.");
@@ -80,6 +79,7 @@ public class PixelDetector extends OpMode {
         }
         if(gamepad1.options){
             toolkit.stopStreaming();
+            requestOpModeStop();
         }
     }
 }

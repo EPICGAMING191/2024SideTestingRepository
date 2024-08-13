@@ -1,6 +1,5 @@
 package org.firstinspires.ftc.teamcode.JackBurr.Camera.TensorFlow;
 
-
 import com.acmerobotics.dashboard.FtcDashboard;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
@@ -169,7 +168,6 @@ public class RoboKaiTensorFlowToolkit {
     }
 
     public void printDetails(Telemetry telemetry, Recognition recognition, double objectX, double objectY){
-        telemetry.addData(""," ");
         telemetry.addData("Image", "%s (%.0f %% Conf.)", recognition.getLabel(), recognition.getConfidence() * 100);
         telemetry.addData("- Position", "%.0f / %.0f", objectX, objectY);
         telemetry.addData("- Size", "%.0f x %.0f", recognition.getWidth(), recognition.getHeight());

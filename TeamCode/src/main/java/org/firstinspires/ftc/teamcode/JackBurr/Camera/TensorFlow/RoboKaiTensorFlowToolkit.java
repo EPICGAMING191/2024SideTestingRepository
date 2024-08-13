@@ -89,7 +89,7 @@ public class RoboKaiTensorFlowToolkit {
         }
         else{
             processor = new TfodProcessor.Builder()
-                    //.setModelFileName(SEASON_MODEL)
+                    .setModelAssetName(SEASON_MODEL)
                     //Load default model for the season
                     // The following default settings are available to un-comment and edit as needed to
                     // set parameters for custom models.

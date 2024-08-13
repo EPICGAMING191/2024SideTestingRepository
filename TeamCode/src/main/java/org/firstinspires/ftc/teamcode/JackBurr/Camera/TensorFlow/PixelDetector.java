@@ -74,7 +74,9 @@ public class PixelDetector extends OpMode {
                 }
             }
             toolkit.printDetails(telemetry, recognition, x,y);
-            telemetry.addLine("Pixel Detected at (" + x + "," + y +")");
+            double x_adjusted = Math.round(x * 100.0) / 100.0;
+            double y_adjusted = Math.round(y * 100.0) / 100.0;
+            telemetry.addLine("Pixel Detected at (" + x_adjusted + " , " + y_adjusted +")");
         }
     }
 }

@@ -78,5 +78,8 @@ public class PixelDetector extends OpMode {
             double y_adjusted = Math.round(y * 100.0) / 100.0;
             telemetry.addLine("Pixel Detected at (" + x_adjusted + " , " + y_adjusted +")");
         }
+        if(gamepad1.options){
+            toolkit.stopStreaming();
+        }
     }
 }

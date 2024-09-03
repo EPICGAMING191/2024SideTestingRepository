@@ -5,7 +5,7 @@ import java.io.IOException;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 @TeleOp
-public class FileWriteExample extends OpMode {
+public class WriteToFileTest extends OpMode {
 
     @Override
     public void init() {
